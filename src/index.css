@@ -1,68 +1,146 @@
+/* Paleta de colores personalizados - Tonos pasteles */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --primary-color: #ff9f80; /* Coral suave */
+    --secondary-color: #f6c9b8; /* Rosa pastel */
+    --text-color: #4e4a47; /* Gris oscuro suave */
+    --text-color-secondary: #7c746e; /* Gris claro */
+    --background-color: #f9f4f3; /* Fondo claro cálido */
+    --border-color: #e3d7d0; /* Gris cálido para bordes */
+    --hover-color: #f0826b; /* Rosa coral más oscuro para hover */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* Estilos generales */
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Ant Design Button */
+.ant-btn {
+    font-family: inherit;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 8px 16px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.3s ease;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.ant-btn:hover, .ant-btn:focus {
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+    color: white;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Ant Design Card */
+.ant-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
 }
+
+.ant-card-head {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.ant-card-body {
+    background-color: white;
+}
+
+/* Ant Design List */
+.ant-list-item {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.ant-list-item:hover {
+    background-color: var(--background-color);
+    transform: scale(1.02);
+}
+
+/* Ant Design Typography */
+.ant-typography {
+    color: var(--text-color);
+}
+
+.ant-typography-secondary {
+    color: var(--text-color-secondary);
+}
+
+/* Ant Design Progress */
+.ant-progress-bg {
+    background-color: var(--primary-color);
+}
+
+.ant-progress-text {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Ant Design Spin */
+.ant-spin-dot-item {
+    background-color: var(--primary-color);
+}
+
+/* Ant Design Input */
+.ant-input {
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease;
+}
+
+.ant-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(255, 159, 128, 0.2); /* Color personalizado */
+}
+
+/* Ant Design Modal */
+.ant-modal-content {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ant-modal-header {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.ant-modal-close-x {
+    color: white;
+}
+
+.ant-modal-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+/* Ant Design Table */
+.ant-table {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ant-table-thead > tr > th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ant-table-tbody > tr > td {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ant-table-tbody > tr:hover > td {
+    background-color: var(--background-color);
+}
+
